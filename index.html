@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moodify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background">
+    <div class="star-layer"></div>
+    <div class="overlay"></div>
+  </div>
+  <header class="navbar">
+    <h1>Moodify 🎵</h1>
+    <button id="mute-toggle" class="mute-button">🔊</button>
+  </header>
+  <main class="main-container">
+    <div class="mood-form">
+        <h2>What's your mood today? 🌟</h2>
+        <input type="text" id="mood-input" placeholder="e.g., happy, sad, relaxed..." />
+        <button id="generate-button">Generate Playlist</button>
+      </div>
+      <div class="youtube-player" id="youtube-player">
+        <iframe id="yt-player" width="560" height="315" frameborder="0" allow="autoplay"></iframe>
+      </div>
+    
+<div class="youtube-player" id="youtube-player">
+  <iframe id="yt-player" width="560" height="315" frameborder="0" allow="autoplay"></iframe>
+</div>
+
+  </main>
+  <footer>
+    <p>Made with ❤️ by Moodify Team</p>
+    <p>© 2025 All Rights Reserved.</p>
+  </footer>
+  <audio id="background-music" src="music.mp3" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #000;
+    overflow: hidden;
+  }
+  
+  /* Background Effects */
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+  }
+  
+  .star-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: overlayShift 10s infinite alternate ease-in-out;
+    z-index: 2;
+  }
+  
+  @keyframes overlayShift {
+    0% {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      background: rgba(0, 0, 0, 0.4);
+    }
+    100% {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Star Animation */
+  .star-layer .star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: starMove 10s infinite linear;
+  }
+  
+  .star.hexagon {
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  }
+  
+  .star.diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  
+  @keyframes starMove {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-50vh) scale(0.8);
+    }
+    100% {
+      transform: translateY(-100vh) scale(1);
+    }
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mute-button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s;
+  }
+  
+  .mute-button:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Main Container */
+  .main-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Form */
+  .mood-form {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+  }
+  
+  .mood-form input {
+    width: 80%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  .mood-form button {
+    width: 85%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .mood-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 106, 0, 0.4);
+  }
+  
+  /* Playlist Cards */
+  .playlists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .playlist-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .playlist-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .playlist-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .playlist-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .playlist-card a:hover {
+    background: linear-gradient(135deg, #5b86e5, #36d1dc);
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
